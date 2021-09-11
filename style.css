@@ -443,7 +443,7 @@ header .header ul li a {
     font-size: 12px;
   }
   .hero .content {
-    width: 95%;
+    width: 100%;
   }
   .hero .content p {
     font-size: 16px;
@@ -478,6 +478,9 @@ header .header ul li a {
   .section-header p {
     font-size: 12px;
   }
+  #navBarCTA {
+    display: none;
+  }
   .section-header {
     margin-bottom: 50px;
   }
@@ -489,6 +492,9 @@ header .header ul li a {
   }
   .hero .content h1 {
     font-size: 50px;
+  }
+  .secondaryHeader {
+    font-size: 25px;
   }
   .hero .content p {
     font-size: 13px;
@@ -597,7 +603,7 @@ header .header ul li a {
 }
 #rememberLabel {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.699);
+  color: rgba(114, 28, 28, 0.699);
   text-align: left;
   margin: 14px;
   margin-left: 5px;
