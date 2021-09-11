@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>AccountHaven</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="header">
+          <div class="logo" onclick="window.location.href='../index.html'">
+            <!-- ------- logo svg ------- -->
+            <h1>Account<span>Haven</span></h1>
+            <!-- ---x--- logo svg ---x--- -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div id="background">
+        <img
+          src="../images/gradient.png"
+          class="backgroundGradient"
+          id="gradient01"
+        />
+        <img
+          src="../images/gradient.png"
+          class="backgroundGradient"
+          id="gradient02"
+        />
+      </div>
+      <div class="wrapper landing">
+        <div class="content formPanel">
+          <h1 id="loginHeader">Log-In</h1>
+          <p id="loginText">Welcome back!</p>
+          <form action="" method="POST" id="loginPanel">
+            <input type="text" class="inputText" placeholder="Username" />
+            <input type="text" class="inputText" placeholder="Password" />
+            <label
+              for="rememberCheck"
+              style="word-wrap: break-word"
+              id="rememberLabel"
+            >
+              <input type="checkbox" name="rememberCheck" id="rememberCheck" />
+              Remember Me
+            </label>
+
+            <input type="button" value="Log-In" class="primaryButton" />
+            <div>
+              <p id="loginDivider">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ <span>or</span> ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</p>
+            </div>
+            <input
+              type="button"
+              value="Create an account"
+              class="secondaryButton"
+              onclick="window.location.href='register.html'"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

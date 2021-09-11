@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>AccountHaven</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="header">
+          <div class="logo" onclick="window.location.href='../index.html'">
+            <!-- ------- logo svg ------- -->
+            <h1>Account<span>Haven</span></h1>
+            <!-- ---x--- logo svg ---x--- -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div id="background">
+        <img
+          src="../images/gradient.png"
+          class="backgroundGradient"
+          id="gradient01"
+        />
+        <img
+          src="../images/gradient.png"
+          class="backgroundGradient"
+          id="gradient02"
+        />
+      </div>
+      <div class="wrapper landing">
+        <div class="content formPanel">
+          <h1 id="loginHeader">Create New Account</h1>
+          <p id="loginText">Let's get you started!</p>
+          <form action="" method="POST" id="loginPanel">
+            <input
+              type="text"
+              class="inputText"
+              placeholder="Username"
+              id="username"
+            />
+            <input
+              type="text"
+              class="inputText"
+              placeholder="E-Mail Address"
+              id="email"
+            />
+            <input
+              type="text"
+              class="inputText"
+              placeholder="Password"
+              id="pass"
+            />
+            <input
+              type="text"
+              class="inputText"
+              placeholder="Confirm Password"
+              id="confirm"
+            />
+            <input
+              type="text"
+              class="inputText"
+              placeholder="Invite Code"
+              id="invite"
+            />
+            <p id="errorText" class="hidden">
+              ⚠ Check your entered details and try again.
+            </p>
+
+            <div>
+              <input
+                type="button"
+                value="Sign-Up"
+                class="primaryButton"
+                id="registerButton01"
+                onclick="register()"
+              />
+              <input
+                type="button"
+                value="Log-In"
+                class="secondaryButton"
+                id="registerButton02"
+                onclick="window.location.href='login.html'"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script>
+      function register() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+        var confirm = document.getElementById("confirm").value;
+        var invite = document.getElementById("invite").value;
+
+        if (validateEmail(email) && pass == confirm && pass.length > 6) {
+          console.log("Nice inputs bro");
+          document.getElementById("errorText").classList.add("hidden");
+        } else {
+          document.getElementById("errorText").classList.remove("hidden");
+        }
+      }
+      function validateEmail(email) {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
+  </body>
+</html>
